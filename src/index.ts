@@ -1,9 +1,4 @@
-import { SapphireClient} from '@sapphire/framework';
-import { Intents } from 'discord.js';
-import {token} from './config.json'
-
-const client = new SapphireClient(
-    { intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MESSAGE_REACTIONS, Intents.FLAGS.DIRECT_MESSAGES],loadMessageCommandListeners: true,caseInsensitiveCommands:true, partials: ['MESSAGE', 'CHANNEL', 'REACTION'], ws: {
-
-    }});
+import { token } from "./config.json";
+import { AuraClient } from "./Lib/AuraClient";
+const client = new AuraClient();
 void client.login(token);
