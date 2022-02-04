@@ -36,4 +36,3 @@ export class ModMailSystem extends Listener {
     myMessage.run(msg);
   }
 }
-// if a user is doing for example X report it should justify that its a suggestion/report or whatever in the respective moderation channel
