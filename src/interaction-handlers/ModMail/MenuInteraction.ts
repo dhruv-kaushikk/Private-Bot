@@ -10,10 +10,15 @@ export class ModMailMenuHandler extends InteractionHandler {
   }
   public async parse(interaction: SelectMenuInteraction) {
     if (interaction.customId !== "HelpProceed") return this.none();
-    return this.some();
+    return this.some({
+      index: interaction.values[0],
+      name: interaction.component.options[interaction.values[0]]!,
+    });
   }
   public async run(
     interaction: SelectMenuInteraction,
     result: InteractionHandler.ParseResult<this>
-  ) {}
+  ) {
+    interaction.channel?.send(`You selected ${result.name}, proceeding...`);
+  }
 }

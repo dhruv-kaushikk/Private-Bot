@@ -12,7 +12,22 @@ export class ModMailButtonHandler extends InteractionHandler {
     if (interaction.customId !== "HelpProceed") return this.none();
     return this.some();
   }
-  public async run(interaction: SelectMenuInteraction) {
-    interaction.channel?.send("waiting....");
+  public async run() {
+    //boilerPlate
+    // if(index == 0){
+    //   // do this
+    // }
+    // if(index == 1){
+    //   // do this
+    // }
+    // if(index == 2){
+    //   // do this
+    // }
+    // if(index == 3){
+    //   // do this
+    // }
+    // if(index == 4){
+    //   // do this
+    // }
   }
 }
