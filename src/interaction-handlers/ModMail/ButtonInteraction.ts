@@ -3,31 +3,14 @@ import {
   InteractionHandlerTypes,
   PieceContext,
 } from "@sapphire/framework";
-import type { SelectMenuInteraction } from "discord.js";
+import type { ButtonInteraction } from "discord.js";
 export class ModMailButtonHandler extends InteractionHandler {
   public constructor(ctx: PieceContext) {
-    super(ctx, { interactionHandlerType: InteractionHandlerTypes.SelectMenu });
+    super(ctx, { interactionHandlerType: InteractionHandlerTypes.Button });
   }
-  public async parse(interaction: SelectMenuInteraction) {
+  public async parse(interaction: ButtonInteraction) {
     if (interaction.customId !== "HelpProceed") return this.none();
     return this.some();
   }
-  public async run() {
-    //boilerPlate
-    // if(index == 0){
-    //   // do this
-    // }
-    // if(index == 1){
-    //   // do this
-    // }
-    // if(index == 2){
-    //   // do this
-    // }
-    // if(index == 3){
-    //   // do this
-    // }
-    // if(index == 4){
-    //   // do this
-    // }
-  }
+  public async run() {}
 }

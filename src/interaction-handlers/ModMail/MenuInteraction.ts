@@ -19,6 +19,8 @@ export class ModMailMenuHandler extends InteractionHandler {
     interaction: SelectMenuInteraction,
     result: InteractionHandler.ParseResult<this>
   ) {
-    interaction.channel?.send(`You selected ${result.name}, proceeding...`);
+    interaction.channel?.send(
+      `You've selected ${result.name}, You can now press the proceed button, to get started!`
+    );
   }
 }

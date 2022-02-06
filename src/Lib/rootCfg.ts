@@ -4,6 +4,7 @@ import type { ClientOptions } from "discord.js";
 export const CLIENT_OPTIONS = <ClientOptions>(<SapphireClientOptions>{
   caseInsensitiveCommands: true,
   caseInsensitivePrefixes: true,
+  logger: true,
   loadMessageCommandListeners: true,
   intents: [
     "GUILDS",
@@ -16,9 +17,11 @@ export const CLIENT_OPTIONS = <ClientOptions>(<SapphireClientOptions>{
     status: "online",
     activities: [
       {
-        name: "To DMs for Help",
-        type: "LISTENING",
+        name: "DMs for Help",
+        type: "WATCHING",
       },
     ],
   },
 });
+export const MONGO_URL =
+  "mongodb+srv://Aura:%40%23%24Dhruv7894@cluster0.wyala.mongodb.net/Private-Bot"; //change password, to lazy to add this to .gitignore
