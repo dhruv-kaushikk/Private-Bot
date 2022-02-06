@@ -12,13 +12,14 @@
   "license": "ISC",
   "dependencies": {
     "@sapphire/decorators": "^4.1.0",
-    "@sapphire/discord.js-utilities": "^4.6.0-next.b5191d7.0",
+    "@sapphire/discord.js-utilities": "^4.6.1",
     "@sapphire/framework": "^3.0.0-next.f330d83.0",
     "@sapphire/time-utilities": "^1.6.0",
     "@sapphire/ts-config": "^3.1.8",
     "@sapphire/utilities": "^3.3.0",
     "discord-api-types": "^0.26.1",
     "discord.js": "^13.6.0",
+    "mongoose": "^6.2.0",
     "pretty-ms": "^7.0.1"
   },
   "devDependencies": {
