@@ -16,13 +16,6 @@ export class HelpPagination extends AuraPaginatedMessage {
           }
         },
       },
-      {
-        customId: "HelpProceed",
-        type: 2,
-        label: "Proceed",
-        style: "PRIMARY",
-        run: async ({}) => {},
-      },
     ]);
   }
 }

@@ -12,5 +12,27 @@ export class ModMailButtonHandler extends InteractionHandler {
     if (interaction.customId !== "HelpProceed") return this.none();
     return this.some();
   }
-  public async run() {}
+  public async run(interaction: ButtonInteraction) {
+    if (this.RegexMsg(interaction) === "user reports") {
+      interaction.channel?.send("User Reports");
+    }
+    if (this.RegexMsg(interaction) === "dm advertisement") {
+      interaction.channel?.send("DM Advertisement");
+    }
+    if (this.RegexMsg(interaction) === "suggestions") {
+      interaction.channel?.send("Suggestions");
+    }
+    if (this.RegexMsg(interaction) === "miscellaneous") {
+      interaction.channel?.send("Miscellaneous");
+    }
+  }
+  public RegexMsg(interaction: ButtonInteraction) {
+    var regex = /\`(.*?)\`/;
+    try {
+      var matched = regex.exec(interaction.message.content)![1].toLowerCase();
+      return matched;
+    } catch (error) {
+      interaction.client.logger.error(error);
+    }
+  }
 }

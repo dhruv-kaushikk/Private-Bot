@@ -4,7 +4,7 @@ import { connect } from "mongoose";
 export class AuraClient extends SapphireClient {
   constructor() {
     super(CLIENT_OPTIONS);
-    this.InitMongoose();
+    //this.InitMongoose();
   }
   async InitMongoose() {
     await connect(MONGO_URL, {

@@ -24,4 +24,4 @@ export const CLIENT_OPTIONS = <ClientOptions>(<SapphireClientOptions>{
   },
 });
 export const MONGO_URL =
-  "mongodb+srv://Aura:%40%23%24Dhruv7894@cluster0.wyala.mongodb.net/Private-Bot"; //change password, to lazy to add this to .gitignore
+  "mongodb+srv://Aura:<pass>@cluster0.wyala.mongodb.net/Private-Bot"; //change password, to lazy to add this to .gitignore
