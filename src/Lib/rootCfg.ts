@@ -5,6 +5,7 @@ export const CLIENT_OPTIONS = <ClientOptions>(<SapphireClientOptions>{
   caseInsensitiveCommands: true,
   caseInsensitivePrefixes: true,
   logger: true,
+  defaultPrefix: ">",
   loadMessageCommandListeners: true,
   intents: [
     "GUILDS",

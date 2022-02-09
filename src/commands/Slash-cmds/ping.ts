@@ -4,7 +4,7 @@ import {
   RegisterBehavior,
 } from "@sapphire/framework";
 import { ColorResolvable, Message, MessageEmbed } from "discord.js";
-import { EmbedColors } from "../config.json";
+import { EmbedColors } from "../../config.json";
 import type { CommandInteraction } from "discord.js";
 export class PingCommand extends Command {
   public override async chatInputRun(interaction: CommandInteraction) {

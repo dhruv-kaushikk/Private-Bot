@@ -12,11 +12,6 @@ interface MsgRateLimitParameters {
   msg?: Message;
   /** The {@link RateLimitManager} for this route */
   manager?: RateLimitManager;
-
-  spamExceed?: {
-    enabled: boolean;
-    tries: number;
-  };
 }
 
 /**
@@ -29,7 +24,6 @@ export function isMsgRateLimited({
   user,
   msg,
   manager,
-  spamExceed,
 }: MsgRateLimitParameters) {
   if (
     isNullishOrZero(time) ||
@@ -39,7 +33,6 @@ export function isMsgRateLimited({
   ) {
     return false;
   }
-  spamExceed;
   const id = user.id as string;
   const bucket = manager.acquire(id);
   if (bucket.limited) {
