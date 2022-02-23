@@ -19,7 +19,7 @@ export class EmojiCommand extends Command {
       },
       {
         guildIds: ["887348082835062786"],
-        idHints: ["938687506306719744"],
+        idHints: ["944516699212894238"],
         behaviorWhenNotIdentical: RegisterBehavior.Overwrite,
       }
     );

@@ -1,17 +1,17 @@
 import { SapphireClient } from "@sapphire/framework";
-import { CLIENT_OPTIONS, MONGO_URL } from "./rootCfg";
-import { connect } from "mongoose";
+import { CLIENT_OPTIONS } from "./rootCfg";
+import type { User } from "discord.js";
 export class AuraClient extends SapphireClient {
+  public blackListedUsers: Array<User> = [];
   constructor() {
     super(CLIENT_OPTIONS);
     //this.InitMongoose();
+    this.blackListedUsers = this.getBlackUser;
   }
-  async InitMongoose() {
-    await connect(MONGO_URL, {
-      keepAlive: true,
-      retryWrites: true,
-      w: "majority",
-    });
-    this.logger.info("connected to Mongo DB");
+  get getBlackUser(): Array<User> {
+    return this.blackListedUsers;
+  }
+  set setBlackUser(userArray: Array<User>) {
+    this.blackListedUsers.push(...userArray);
   }
 }

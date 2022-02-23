@@ -34,7 +34,7 @@ export class PingCommand extends Command {
       },
       {
         guildIds: ["887348082835062786"],
-        idHints: ["937532486148313159"],
+        idHints: ["944516700810919936"],
         behaviorWhenNotIdentical: RegisterBehavior.Overwrite,
       }
     );
